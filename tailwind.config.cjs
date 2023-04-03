@@ -1,19 +1,35 @@
+const { fontFamily } = require("tailwindcss/defaultTheme");
 const plugin = require("tailwindcss/plugin");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ["./src/**/*.{astro,html,js,jsx,md,svelte,ts,tsx,vue}"],
 	darkMode: "class",
 	corePlugins: {
+		// disable aspect ratio as per docs -> @tailwindcss/aspect-ratio
 		aspectRatio: false,
+		// disable some core plugins as they are included in the css, even when unused
+		touchAction: false,
+		ringOffsetWidth: false,
+		ringOffsetColor: false,
+		scrollSnapType: false,
+		borderOpacity: false,
+		textOpacity: false,
+		fontVariantNumeric: false,
 	},
 	theme: {
 		extend: {
 			colors: {
-				bgColor: "hsl(var(--theme-bg) / <alpha-value>)",
-				textColor: "hsl(var(--theme-text) / <alpha-value>)",
-				link: "hsl(var(--theme-link) / <alpha-value>)",
-				accent: "hsl(var(--theme-accent) / <alpha-value>)",
-				"accent-2": "hsl(var(--theme-accent-2) / <alpha-value>)",
+				bgColor: "var(--theme-bg)",
+				textColor: "var(--theme-text)",
+				link: "var(--theme-link)",
+				accent: "var(--theme-accent)",
+				"accent-2": "var(--theme-accent-2)",
+			},
+			fontFamily: {
+				// Add any custom fonts here
+				sans: [...fontFamily.sans],
+				serif: [...fontFamily.serif],
 			},
 			transitionProperty: {
 				height: "height",
@@ -35,7 +51,7 @@ module.exports = {
 				DEFAULT: {
 					css: {
 						a: {
-							"@apply cactus-link": "",
+							"@apply cactus-link no-underline": "",
 						},
 						strong: {
 							fontWeight: "700",
@@ -83,16 +99,12 @@ module.exports = {
 		plugin(function ({ addComponents }) {
 			addComponents({
 				".cactus-link": {
-					"@apply relative py-2 underline underline-offset-4 decoration-2 decoration-link sm:no-underline sm:py-0":
-						{},
-					"@media (min-width: 640px)": {
-						"&:hover": {
-							"@apply sm:after:h-0.5 sm:after:bg-link": {},
-						},
-						"&::after": {
-							"@apply absolute bottom-0 inset-x-0 block content-[''] h-[1px] bg-textColor motion-safe:transition-height ease-in-out":
-								{},
-						},
+					"@apply bg-[size:100%_6px] bg-bottom bg-repeat-x": {},
+					backgroundImage:
+						"linear-gradient(transparent,transparent 5px,var(--theme-text) 5px,var(--theme-text))",
+					"&:hover": {
+						backgroundImage:
+							"linear-gradient(transparent,transparent 4px,var(--theme-link) 4px,var(--theme-link))",
 					},
 				},
 				".title": {
