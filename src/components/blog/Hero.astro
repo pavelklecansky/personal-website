@@ -13,10 +13,9 @@ const postDate = getFormattedDate(content.data.publishDate, { month: "long" });
 ---
 
 <h1 class="title mb-3 sm:mb-1">{content.data.title}</h1>
-<time datetime={datetime}>{postDate}</time>
 {
 	!!content.data.tags?.length && (
-		<div class="mt-1 sm:mt-0 sm:inline sm:before:content-['|']">
+		<div class="mt-1 sm:mt-0 sm:inline">
 			<svg
 				aria-hidden="true"
 				focusable="false"
@@ -35,14 +34,13 @@ const postDate = getFormattedDate(content.data.publishDate, { month: "long" });
 				<path d="M6 9h-.01" />
 			</svg>
 			{content.data.tags.map((tag, i) => (
-				<>
+				<span>
 					<a
 						class="cactus-link inline-block before:content-['#']"
 						aria-label={`View more blogs with the tag ${tag}`}
 						href={`/tags/${tag}`}
-					>{tag}</a>
-					{i < content.data.tags.length - 1 && ", "}
-				</>
+					>{tag}</a>{i < content.data.tags.length - 1 && ", "}
+				</span>
 			))}
 		</div>
 	)

@@ -4,17 +4,16 @@ import { SOCIAL_LINKS } from "@/data/constants";
 // *** SVG icons from https://tablericons.com/ ***
 ---
 
-<div class="flex flex-wrap items-center gap-x-4 sm:items-center">
+<div class="flex flex-wrap items-center gap-x-1 sm:items-center">
 	<p>Find me on</p>
-	<ul class="flex flex-1 items-center gap-x-4 sm:flex-initial">
+	<ul class="flex flex-1 items-center gap-x-1 sm:flex-initial">
 		<li>
 			<a
 				class="inline-block p-2 sm:hover:text-link"
 				href={SOCIAL_LINKS.github}
 				target="_blank"
 				rel="noopener noreferrer"
-			>
-				<svg
+				><svg
 					class="h-6 w-6"
 					aria-hidden="true"
 					focusable="false"
@@ -36,7 +35,7 @@ import { SOCIAL_LINKS } from "@/data/constants";
 			</a>
 		</li>
 		<li>
-			<a class="inline-block p-2 sm:hover:text-link" href={`mailto:${SOCIAL_LINKS.email}`}>
+			<a class="inline-block sm:hover:text-link" href={`mailto:${SOCIAL_LINKS.email}`}>
 				<svg
 					class="h-6 w-6"
 					aria-hidden="true"
