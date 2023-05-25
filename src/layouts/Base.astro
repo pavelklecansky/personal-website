@@ -5,7 +5,6 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SkipLink from "@/components/SkipLink";
 import { siteConfig } from "@/site-config";
-import { GoogleAnalytics } from "astro-google-analytics";
 
 interface Props {
 	meta: SiteMeta;
@@ -51,8 +50,20 @@ const {
 			// initailse root class attribute
 			root.classList.toggle("dark", isDark);
 		</script>
-		<GoogleAnalytics id="G-JH1NMD4JKD" />
+		<!-- Google tag (gtag.js) -->
+		<script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-JH1NMD4JKD"
+		></script>
+		<script type="text/partytown">
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+
+			gtag("config", "G-JH1NMD4JKD");
+		</script>
 	</head>
+
 	<body>
 		<SkipLink />
 		<Header />
