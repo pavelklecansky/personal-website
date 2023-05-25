@@ -18,6 +18,7 @@ specifiers:
   '@typescript-eslint/parser': ^5.54.0
   astro: 2.0.17
   astro-eslint-parser: ^0.11.0
+  astro-google-analytics: ^1.0.3
   autoprefixer: ^10.4.13
   eslint: ^8.35.0
   eslint-config-prettier: ^8.7.0
@@ -41,6 +42,7 @@ dependencies:
   '@astrojs/prefetch': 0.1.2
   '@astrojs/rss': 2.1.1
   astro: 2.0.17
+  astro-google-analytics: 1.0.3
   satori: 0.4.1
   satori-html: 0.3.2
   sharp: 0.31.3
@@ -73,7 +75,7 @@ devDependencies:
   prettier: 2.8.4
   prettier-plugin-astro: 0.8.0
   prettier-plugin-tailwindcss: 0.2.4_cfgkwvtfb3vmyej4cugnuognhu
-  tailwindcss: 3.2.7_postcss@8.4.21
+  tailwindcss: 3.2.7
   typescript: 4.9.5
 
 packages:
@@ -221,7 +223,7 @@ packages:
       autoprefixer: 10.4.13_postcss@8.4.21
       postcss: 8.4.21
       postcss-load-config: 4.0.1_postcss@8.4.21
-      tailwindcss: 3.2.7_postcss@8.4.21
+      tailwindcss: 3.2.7
     transitivePeerDependencies:
       - ts-node
     dev: true
@@ -952,7 +954,7 @@ packages:
     peerDependencies:
       tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
     dependencies:
-      tailwindcss: 3.2.7_postcss@8.4.21
+      tailwindcss: 3.2.7
     dev: true
 
   /@tailwindcss/line-clamp/0.4.2_tailwindcss@3.2.7:
@@ -960,7 +962,7 @@ packages:
     peerDependencies:
       tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
     dependencies:
-      tailwindcss: 3.2.7_postcss@8.4.21
+      tailwindcss: 3.2.7
     dev: true
 
   /@tailwindcss/typography/0.5.9_tailwindcss@3.2.7:
@@ -972,7 +974,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
-      tailwindcss: 3.2.7_postcss@8.4.21
+      tailwindcss: 3.2.7
     dev: true
 
   /@types/acorn/4.0.6:
@@ -1422,6 +1424,10 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /astro-google-analytics/1.0.3:
+    resolution: {integrity: sha512-5bD7jA15yxVaUFVVEFG6KKMphYJ4AKP4+HSqCVBpTBnqh8LL0giTdAHpG9KJs3JaFbGQUTWP5Pqt8+twz7f55Q==}
+    dev: false
 
   /astro/2.0.17:
     resolution: {integrity: sha512-K/SAoe4Tfhg4XhOu1mFOp9qiC/m8YuBmL3//WAA+mcPTlg9A21nlXH/jmsfbizQdZn/AyoPrkTWQm1pnU05OsQ==}
@@ -5046,12 +5052,10 @@ packages:
       '@pkgr/utils': 2.3.1
       tslib: 2.5.0
 
-  /tailwindcss/3.2.7_postcss@8.4.21:
+  /tailwindcss/3.2.7:
     resolution: {integrity: sha512-B6DLqJzc21x7wntlH/GsZwEXTBttVSl1FtCzC8WP4oBc/NKef7kaax5jeihkkCEWc831/5NDJ9gRNDK6NEioQQ==}
     engines: {node: '>=12.13.0'}
     hasBin: true
-    peerDependencies:
-      postcss: ^8.0.9
     dependencies:
       arg: 5.0.2
       chokidar: 3.5.3

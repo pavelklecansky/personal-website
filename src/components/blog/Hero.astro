@@ -7,9 +7,6 @@ interface Props {
 }
 
 const { content } = Astro.props;
-
-const datetime = content.data.publishDate.toISOString();
-const postDate = getFormattedDate(content.data.publishDate, { month: "long" });
 ---
 
 <h1 class="title mb-3 sm:mb-1">{content.data.title}</h1>
@@ -37,9 +34,10 @@ const postDate = getFormattedDate(content.data.publishDate, { month: "long" });
 				<span>
 					<a
 						class="cactus-link inline-block before:content-['#']"
-						aria-label={`View more blogs with the tag ${tag}`}
+						aria-label={`View more projects with the tag ${tag}`}
 						href={`/tags/${tag}`}
-					>{tag}</a>{i < content.data.tags.length - 1 && ", "}
+					>{tag}</a>
+					{i < content.data.tags.length - 1 && ", "}
 				</span>
 			))}
 		</div>
