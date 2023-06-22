@@ -28,7 +28,7 @@ const url = new URL(Astro.request.url);
 	});
 </script>
 
-<header id="main-header" class="group relative mb-20 flex items-center sm:pl-[6rem]">
+<header id="main-header" class="group relative mb-10 flex items-center sm:pl-[6rem]">
 	<div class="flex sm:flex-col">
 		<a
 			href={localizePath("/", i18next.language)}
@@ -62,10 +62,12 @@ const url = new URL(Astro.request.url);
 			}
 		</nav>
 	</div>
-	<ThemeToggle />
-	<LanguageSelector
-		class="ml-2 rounded-md border bg-bgColor p-0.5 text-sm text-textColor sm:text-xl"
-	/>
+	<div class="ml-auto flex">
+		<ThemeToggle />
+		<LanguageSelector
+			class="ml-2 rounded-md border bg-bgColor p-0.5 text-sm text-textColor sm:text-xl"
+		/>
+	</div>
 	<button
 		id="toggle-navigation-menu"
 		class="group relative ml-2 h-7 w-7 sm:invisible sm:hidden"
