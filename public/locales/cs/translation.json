@@ -1,5 +1,8 @@
 {
-    "test": "Čeština",
+    "home": "Úvod",
+    "about": "O mně",
+    "resume": "CV",
+    "projects": "Projekty",
     "pageTitle": "Welcome to Astro.",
     "welcome": "Welcome to <0>Astro</0>",
     "instructions": "Checkout the <0>src/pages</0> directory to get started.<1><2>Code Challenge:</2> Translate this page with your language of choice.",

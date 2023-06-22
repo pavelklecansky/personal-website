@@ -1,18 +1,18 @@
 export const MENU_LINKS = [
 	{
-		title: "Home",
+		title: "home",
 		path: "/",
 	},
 	{
-		title: "About",
+		title: "about",
 		path: "/about",
 	},
 	{
-		title: "Resume",
+		title: "resume",
 		path: "/resume.pdf",
 	},
 	{
-		title: "Projects",
+		title: "projects",
 		path: "/posts",
 	},
 ];
@@ -59,6 +59,6 @@ export const PLAN_TO_LEARN = [
 // ! Remember to add your own socials
 export const SOCIAL_LINKS = {
 	github: "https://github.com/pavelklecansky",
-	linkedin: "https://www.linkedin.com/in/pavel-klecansky/",
+	linkedin: "https://www.linkedin.com/in/pavelklecansky/",
 	email: "pavel@klecansky.cz",
 };

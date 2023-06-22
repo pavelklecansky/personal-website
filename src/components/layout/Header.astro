@@ -5,7 +5,7 @@ import { Image } from "@astrojs/image/components";
 import image from "../../assets/image.jpg";
 import { LanguageSelector } from "astro-i18next/components";
 import { localizePath } from "astro-i18next";
-import i18next from "i18next";
+import i18next, { t } from "i18next";
 
 const url = new URL(Astro.request.url);
 ---
@@ -56,14 +56,16 @@ const url = new URL(Astro.request.url);
 						aria-current={url.pathname === link.path ? "page" : false}
 						rel="prefetch"
 					>
-						{link.title}
+						{t(link.title)}
 					</a>
 				))
 			}
 		</nav>
 	</div>
 	<ThemeToggle />
-	<LanguageSelector class="ml-2 rounded-md border bg-bgColor p-0.5 text-xs text-textColor" />
+	<LanguageSelector
+		class="ml-2 rounded-md border bg-bgColor p-0.5 text-sm text-textColor sm:text-xl"
+	/>
 	<button
 		id="toggle-navigation-menu"
 		class="group relative ml-2 h-7 w-7 sm:invisible sm:hidden"
