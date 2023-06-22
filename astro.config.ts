@@ -5,6 +5,7 @@ import image from "@astrojs/image";
 import sitemap from "@astrojs/sitemap";
 import prefetch from "@astrojs/prefetch";
 import partytown from "@astrojs/partytown";
+import astroI18next from "astro-i18next";
 
 // https://astro.build/config
 export default defineConfig({
@@ -33,6 +34,7 @@ export default defineConfig({
 		}),
 		sitemap(),
 		prefetch(),
+		astroI18next(),
 	],
 	vite: {
 		optimizeDeps: {

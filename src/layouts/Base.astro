@@ -5,6 +5,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SkipLink from "@/components/SkipLink";
 import { siteConfig } from "@/site-config";
+import i18next from "i18next";
 
 interface Props {
 	meta: SiteMeta;
@@ -15,9 +16,14 @@ const {
 } = Astro.props;
 ---
 
-<html lang={siteConfig.lang}>
+<html lang={i18next.language}>
 	<head>
-		<BaseHead title={title} description={description} ogImage={ogImage} articleDate={articleDate} />
+		<BaseHead
+			title={title}
+			description={description}
+			ogImage={ogImage}
+			articleDate={articleDate}
+		/>
 		<script define:vars={{ siteConfig }}>
 			const root = document.documentElement;
 			const colorThemeMetaTag = document.querySelector("meta[name='theme-color']");

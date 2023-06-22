@@ -1,6 +1,8 @@
 ---
 import { getFormattedDate } from "@/utils";
 import type { CollectionEntry } from "astro:content";
+import { localizePath } from "astro-i18next";
+import i18next from "i18next";
 
 interface Props {
 	content: CollectionEntry<"post">;
@@ -35,8 +37,10 @@ const { content } = Astro.props;
 					<a
 						class="cactus-link inline-block before:content-['#']"
 						aria-label={`View more projects with the tag ${tag}`}
-						href={`/tags/${tag}`}
-					>{tag}</a>
+						href={localizePath(`/tags/${tag}`, i18next.language)}
+					>
+						{tag}
+					</a>
 					{i < content.data.tags.length - 1 && ", "}
 				</span>
 			))}

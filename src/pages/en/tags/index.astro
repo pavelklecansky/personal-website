@@ -4,7 +4,7 @@ import PageLayout from "@/layouts/Base";
 import { getUniqueTagsWithCount } from "@/utils";
 import { getCollection } from "astro:content";
 
-changeLanguage("cs");
+changeLanguage("en");
 
 const allPosts = await getCollection("post");
 const allTags = getUniqueTagsWithCount(allPosts);

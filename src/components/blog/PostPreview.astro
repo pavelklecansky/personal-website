@@ -1,6 +1,8 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import type { IElement } from "@/data/shared";
+import { localizePath } from "astro-i18next";
+import i18next from "i18next";
 
 interface Props extends IElement {
 	post: CollectionEntry<"post">;
@@ -11,7 +13,11 @@ const { post, as: Element = "div", withDesc = false } = Astro.props;
 ---
 
 <Element>
-	<a href={`/posts/${post.slug}`} class="cactus-link" rel="prefetch">
+	<a
+		href={localizePath(`/posts/${post.slug}`, i18next.language)}
+		class="cactus-link"
+		rel="prefetch"
+	>
 		{post.data.title}
 	</a>
 </Element>

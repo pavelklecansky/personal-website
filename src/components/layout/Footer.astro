@@ -1,5 +1,7 @@
 ---
 import { MENU_LINKS } from "@/data/constants";
+import { localizePath } from "astro-i18next";
+import i18next from "i18next";
 
 const year = new Date().getFullYear();
 ---
@@ -19,7 +21,7 @@ const year = new Date().getFullYear();
 		{
 			MENU_LINKS.map((link) => (
 				<a
-					href={link.path}
+					href={localizePath(link.path, i18next.language)}
 					class="px-4 py-2 sm:py-0 sm:px-2 sm:hover:text-textColor sm:hover:underline"
 				>
 					{link.title}
