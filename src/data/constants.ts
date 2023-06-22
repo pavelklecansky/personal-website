@@ -8,8 +8,51 @@ export const MENU_LINKS = [
 		path: "/about",
 	},
 	{
+		title: "Resume",
+		path: "/resume.pdf",
+	},
+	{
 		title: "Projects",
 		path: "/posts",
+	},
+];
+
+export const MY_SKILL = [
+	{
+		title: "Java",
+	},
+	{
+		title: "Spring",
+	},
+	{
+		title: "Svelte",
+	},
+	{
+		title: "Git",
+	},
+	{
+		title: "HTML",
+	},
+	{
+		title: "CSS",
+	},
+	{
+		title: "JavaScript",
+	},
+	{
+		title: "PostgreSQL",
+	},
+	{
+		title: "Docker",
+	},
+];
+
+export const PLAN_TO_LEARN = [
+	{
+		title: "Flutter",
+	},
+	{
+		title: "Kotlin",
 	},
 ];
 
