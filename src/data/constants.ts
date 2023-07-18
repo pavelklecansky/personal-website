@@ -13,7 +13,7 @@ export const MENU_LINKS = [
 	},
 	{
 		title: "projects",
-		path: "/posts",
+		path: "/projects",
 	},
 ];
 
@@ -53,6 +53,44 @@ export const PLAN_TO_LEARN = [
 	},
 	{
 		title: "Kotlin",
+	},
+];
+
+export const PROJECTS: Array<{ title: string; desc: string; href: string }> = [
+	{
+		title: "Astro",
+		desc: "Build fast websites, faster.",
+		href: "https://astro.build",
+	},
+	{
+		title: "Astro Assets",
+		desc: "Built-in optimized asset support.",
+		href: "https://docs.astro.build/en/guides/assets/",
+	},
+	{
+		title: "Tailwind CSS",
+		desc: "Rapidly build modern websites without ever leaving your HTML.",
+		href: "https://tailwindcss.com",
+	},
+	{
+		title: "Markdown",
+		desc: "Simple and easy-to-use markup language.",
+		href: "https://www.markdownguide.org/",
+	},
+	{
+		title: "MDX",
+		desc: "Markdown for the component era.",
+		href: "https://mdxjs.com/",
+	},
+	{
+		title: "Satori",
+		desc: "Generating png Open Graph images for blog posts.",
+		href: "https://github.com/vercel/satori",
+	},
+	{
+		title: "Pagefind",
+		desc: "A fully static search library.",
+		href: "https://pagefind.app/",
 	},
 ];
 

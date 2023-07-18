@@ -1,0 +1,40 @@
+---
+import { t, changeLanguage } from "i18next";
+import PageLayout from "@/layouts/Base";
+import { PROJECTS } from "@/data/constants";
+
+changeLanguage("en");
+
+const meta = {
+    title: t("projects"),
+};
+---
+
+<PageLayout meta={meta}>
+	<div class="space-y-6">
+		<h1 class="title">{t("projects")}</h1>
+		<p>
+			Hi, I’m a starter Astro. I’m particularly great for getting you started with your own
+			blogging website.
+		</p>
+		<section class="mt-6">
+			<ul class="space-y-4 sm:space-y-2">
+				{
+					PROJECTS.map(({ href, title, desc }) => (
+						<li>
+							<a
+								href={href}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="cactus-link inline-block"
+							>
+								{title}
+							</a>
+							:<p class="inline-block sm:mt-2">{desc}</p>
+						</li>
+					))
+				}
+			</ul>
+		</section>
+	</div>
+</PageLayout>

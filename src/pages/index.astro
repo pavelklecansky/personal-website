@@ -1,17 +1,13 @@
 ---
-import { getCollection } from "astro:content";
+// import { getCollection } from "astro:content";
 import PageLayout from "@/layouts/Base";
-import PostPreview from "@/components/blog/PostPreview";
+// import PostPreview from "@/components/blog/PostPreview";
 import SocialList from "@/components/SocialList";
-import { MY_SKILL, PLAN_TO_LEARN } from "@/data/constants";
-import { sortMDByDate } from "@/utils";
+import { MY_SKILL, PLAN_TO_LEARN, PROJECTS } from "@/data/constants";
+// import { sortMDByDate } from "@/utils";
 import { t, changeLanguage } from "i18next";
 
 changeLanguage("cs");
-
-const MAX_POSTS = 10;
-const allPosts = await getCollection("post");
-const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 ---
 
 <PageLayout meta={{ title: "Home" }}>
@@ -27,8 +23,8 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 		</p>
 		<SocialList />
 	</section>
-	<section class="mt-12">
-		<h2 class="title mb-4 text-xl">My Skills</h2>
+	<section class="mt-6">
+		<h2 class="title mb-4 text-xl">{t("technologie")}</h2>
 		{
 			MY_SKILL.map((skill) => (
 				<div class="mr-2 mb-2 inline-block bg-textColor px-4 py-2 text-base font-semibold text-bgColor">
@@ -36,22 +32,42 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 				</div>
 			))
 		}
-		<h2 class="text-l mb-4 font-bold">Technologie I plan to learn</h2>
+		<!-- <h2 class="text-l mb-4 font-bold">{t("future-technologie")}</h2>
 		{
 			PLAN_TO_LEARN.map((skill) => (
 				<div class="text-md mr-2 mb-2 inline-block bg-textColor px-4 py-2 font-semibold text-bgColor">
 					{skill.title}
 				</div>
 			))
-		}
+		} -->
 	</section>
-	<section aria-label="Blog post list" class="mt-12">
-		<h2 class="title mb-4 text-xl">Projects</h2>
+	<!-- <section aria-label="Blog post list" class="mt-6">
+		<h2 class="title mb-4 text-xl">{t("projects")}</h2>
 		<ul class="space-y-4 sm:space-y-2">
 			{
 				allPostsByDate.map((p) => (
 					<li class="flex flex-col flex-wrap gap-x-2 sm:flex-row [&_q]:w-full">
 						<PostPreview post={p} withDesc={true} />
+					</li>
+				))
+			}
+		</ul>
+	</section> -->
+	<section class="mt-6">
+		<h2 class="title mb-4 text-xl">{t("projects")}</h2>
+		<ul class="space-y-4 sm:space-y-2">
+			{
+				PROJECTS.map(({ href, title, desc }) => (
+					<li>
+						<a
+							href={href}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="cactus-link inline-block"
+						>
+							{title}
+						</a>
+						:<p class="inline-block sm:mt-2">{desc}</p>
 					</li>
 				))
 			}
