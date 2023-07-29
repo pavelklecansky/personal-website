@@ -9,7 +9,7 @@ import astroI18next from "astro-i18next";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://www.astro-theme-cactus.netlify.app/",
+	site: "https://www.klecansky.cz/",
 	markdown: {
 		shikiConfig: {
 			theme: "dracula",
