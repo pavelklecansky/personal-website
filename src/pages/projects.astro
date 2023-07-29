@@ -14,8 +14,7 @@ const meta = {
 	<div class="space-y-6">
 		<h1 class="title">{t("projects")}</h1>
 		<p>
-			Hi, I’m a starter Astro. I’m particularly great for getting you started with your own blogging
-			website.
+			{t("projects-text")}
 		</p>
 		<section class="mt-6">
 			<ul class="space-y-4 sm:space-y-2">
@@ -30,7 +29,7 @@ const meta = {
 							>
 								{t(title)}:
 							</a>
-							:<p class="inline-block sm:mt-2">{desc}</p>
+							:<p class="inline-block sm:mt-2">{t(desc)}</p>
 						</li>
 					))
 				}
