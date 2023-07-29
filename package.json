@@ -1,5 +1,5 @@
 {
-	"name": "astro-cactus",
+	"name": "personal-website-klecansky",
 	"version": "2.1.3",
 	"private": false,
 	"scripts": {
@@ -48,7 +48,7 @@
 		"@astrojs/prefetch": "^0.1.2",
 		"@astrojs/rss": "^2.1.1",
 		"astro": "2.0.17",
-		"astro-i18next": "1.0.0-beta.18",
+		"astro-i18next": "1.0.0-beta.21",
 		"i18next": "^22.4.10",
 		"i18next-fs-backend": "^2.1.5",
 		"satori": "0.4.1",

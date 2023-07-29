@@ -12,11 +12,8 @@ const meta = {
 
 <PageLayout meta={meta}>
 	<div class="space-y-6">
-		<h1 class="title">{t("about")}</h1>
-		<p>
-			Hi, I’m a starter Astro. I’m particularly great for getting you started with your own
-			blogging website.
-		</p>
+		<h1 class="title mb-0">{t("about")}</h1>
+		<p class="text-base" set:html={t("about-me")} />
 		<section class="mt-12">
 			<h2 class="title mb-4 text-xl">{t("technologie")}</h2>
 			{

@@ -4,7 +4,7 @@
 	:root {
 		color-scheme: light;
 		--theme-bg: #fafafa;
-		--theme-link: #567c77;
+		--theme-link: #aa2035;
 		--theme-text: #22272a;
 		--theme-accent: #cc2a42;
 		--theme-accent-2: #111;
@@ -25,6 +25,7 @@
 
 	html {
 		@apply h-full scroll-smooth border-t-2 border-textColor;
+		font-size: 18px;
 	}
 
 	html body {

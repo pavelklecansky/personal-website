@@ -19,7 +19,7 @@ specifiers:
   '@typescript-eslint/parser': ^5.54.0
   astro: 2.0.17
   astro-eslint-parser: ^0.11.0
-  astro-i18next: 1.0.0-beta.18
+  astro-i18next: 1.0.0-beta.21
   autoprefixer: ^10.4.13
   eslint: ^8.35.0
   eslint-config-prettier: ^8.7.0
@@ -46,7 +46,7 @@ dependencies:
   '@astrojs/prefetch': 0.1.2
   '@astrojs/rss': 2.1.1
   astro: 2.0.17
-  astro-i18next: 1.0.0-beta.18_xyc5syl7vr5cqrzruauziqtze4
+  astro-i18next: 1.0.0-beta.21_astro@2.0.17
   i18next: 22.5.1
   i18next-fs-backend: 2.1.5
   satori: 0.4.1
@@ -1476,12 +1476,11 @@ packages:
       - supports-color
     dev: true
 
-  /astro-i18next/1.0.0-beta.18_xyc5syl7vr5cqrzruauziqtze4:
-    resolution: {integrity: sha512-dOopdHbJvFWprhN9A1HrkOaDaADlivz4R6+6Oz2Mq2Ywwvgz4tDzN+//iUf6mJBYwWAOtcJq2rjAs521aX3cfw==}
+  /astro-i18next/1.0.0-beta.21_astro@2.0.17:
+    resolution: {integrity: sha512-1YPqwexumHpK/d9afEoi52CBFTu6k4MYv/oHjsaAasZDvFClU6U5VPttC/OgZcXRYggCM6ee2LOnyHqlmXOeLA==}
     hasBin: true
     peerDependencies:
       astro: '>=1.0.0'
-      i18next: ^22.4.0
     dependencies:
       '@proload/core': 0.3.3
       '@proload/plugin-tsm': 0.2.1_@proload+core@0.3.3

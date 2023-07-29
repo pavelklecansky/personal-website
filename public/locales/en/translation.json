@@ -1,30 +1,16 @@
 {
-  "home": "Home",
-  "about": "About",
-  "resume": "Resume",
-  "projects": "Projects",
-  "technologie": "My Skill",
-  "future-technologie": "Technologie I plan to learn",
-  "find-me": "Find me on",
-  "pageTitle": "Welcome to Astro.",
-  "welcome": "Welcome to <0>Astro</0>",
-  "instructions": "Checkout the <0>src/pages</0> directory to get started.<1><2>Code Challenge:</2> Translate this page with your language of choice.",
-  "cards": {
-    "documentation": {
-      "title": "Documentation",
-      "body": "Learn how Astro works and explore the docs."
-    },
-    "integrations": {
-      "title": "Integrations",
-      "body": "Supercharge your projects with new frameworks and libraries."
-    },
-    "themes": {
-      "title": "Themes",
-      "body": "Explore a galaxy of community-built starter themes."
-    },
-    "chat": {
-      "title": "Chat",
-      "body": "Come and say hi to our amazing Discord community. ❤️"
+    "home": "Home",
+    "about": "About",
+    "resume": "Resume",
+    "projects": "Projects",
+    "about-me": "My name is Pavel. I am a developer based in the Czech Republic currently interested in backend development with Java and Spring. I currently work as Junior Full-stack developer at <a target='_blank' class='cactus-link' href='https://www.kpsys.cz/'>KPSYS</a>",
+    "technologie": "My Skill",
+    "future-technologie": "Technologie I plan to learn",
+    "find-me": "Find me on",
+    "project": {
+        "wren": {
+            "title": "Wren Interpreter",
+            "description": "Basic Wren interpreter with graphic editor"
+        }
     }
-  }
 }
