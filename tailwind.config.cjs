@@ -34,6 +34,9 @@ module.exports = {
 			transitionProperty: {
 				height: "height",
 			},
+			screens: {
+				'xs': '475px'
+			},
 			typography: (theme) => ({
 				cactus: {
 					css: {
