@@ -9,6 +9,10 @@
     "future-technologie": "Technologie, které se plánuji naučit",
     "find-me": "Najdete mě na",
     "project": {
+        "recipedb": {
+            "title": "RecipeDB",
+            "description": "Jednoduchá aplikace pro ukládání receptů"
+        },
         "wren": {
             "title": "Wren Interpret",
             "description": "Jednoduchý Wren interpret s grafickým editorem"

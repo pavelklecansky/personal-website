@@ -9,6 +9,10 @@
     "future-technologie": "Technologie I plan to learn",
     "find-me": "Find me on",
     "project": {
+        "recipedb": {
+            "title": "RecipeDB",
+            "description": "Simple application for storing recipes"
+        },
         "wren": {
             "title": "Wren Interpreter",
             "description": "Basic Wren interpreter with graphic editor"

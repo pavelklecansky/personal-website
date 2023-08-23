@@ -59,9 +59,14 @@ export const PLAN_TO_LEARN = [
 export const PROJECTS: Array<{ title: string; desc: string; href: string }> = [
 
 	{
+		title: "project.recipedb.title",
+		desc: "project.recipdb.description",
+		href: "https://github.com/pavelklecansky/recipedb-hilla",
+	},
+	{
 		title: "project.wren.title",
 		desc: "project.wren.description",
-		href: "https://github.com/pavelklecansky/Wren_Interpreter",
+		href: "https://github.com/pavelklecansky/wren-interpreter",
 	},
 ];
 
