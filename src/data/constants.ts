@@ -60,7 +60,7 @@ export const PROJECTS: Array<{ title: string; desc: string; href: string }> = [
 
 	{
 		title: "project.recipedb.title",
-		desc: "project.recipdb.description",
+		desc: "project.recipedb.description",
 		href: "https://github.com/pavelklecansky/recipedb-hilla",
 	},
 	{
